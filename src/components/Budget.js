@@ -11,11 +11,12 @@ const Budget = () => {
     <div>
         <label>
             Budget: 
-            <input name='budget' type='number' value={budgetValue} onChange={
-                (e)=> {
-                setBudgetValue(e.target.value)
-                }
-            } />
+            <input name='budget' type='number' value={budgetValue} //onChange={
+                //(e)=> {
+                //setBudgetValue(e.target.value)
+                
+            //} 
+            />
                 
                 {//setBudgetValue(e.target.value)}/>
                 }
