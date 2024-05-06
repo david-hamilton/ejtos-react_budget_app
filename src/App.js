@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,30 +20,35 @@ const App = () => {
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-4'>
-                        <div className='col-3 bg-light p-3' > 
+                    <div className='row mt-3'>
+                        <div className='col-sm' > 
                             <Budget />
                             
                         </div>
-                        <div className='col-3 bg-success' >
+                        <div className='col-sm' >
                             <Remaining />
                         </div>
-                        <div className='col-3'>
+                        <div className='col-sm'>
                             <ExpenseTotal />
                         </div>
-                        <div className='col-3'>
-                            <Currency />
+                        <div className='col-sm'>
+                            {//<Currency />
+}
                         </div>
                     </div>
-                    <div className='row mt-4'>
-                        <div>
-                            <ExpenseList />
+                    <div className='row mt-3'>
+                        <h3>Allocation</h3>
+                        <div className='row'>
+                            <div className='col-sm'>
+                                <ExpenseList />
+                            </div>
+                            
                         </div>
-                        <div>
-                            <ExpenseItem />
-                        </div>
-                        <div>
-                            <AllocationForm />
+                        <h3 className='mt-3'>Change allocation</h3>
+                        <div className='row mt-3'>
+                            <div className='col-sm'>
+                                <AllocationForm />
+                            </div>
                         </div>
                     </div>
                 
