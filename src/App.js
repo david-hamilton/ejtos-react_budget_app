@@ -32,8 +32,7 @@ const App = () => {
                             <ExpenseTotal />
                         </div>
                         <div className='col-sm'>
-                            {//<Currency />
-}
+                            <Currency />
                         </div>
                     </div>
                     <div className='row mt-3'>
