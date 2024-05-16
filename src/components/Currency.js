@@ -14,7 +14,6 @@ const Currency = () => {
         )
 
     }
-    console.log(currency)
     return(
         <div>
             <div className="dropdown btn btn-secondary ">
