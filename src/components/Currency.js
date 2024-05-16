@@ -1,17 +1,27 @@
-import React, {useContext, useState} from "react";
-import { AppContext, AppReducer } from "../context/AppContext";
+import React, {useContext} from "react";
+import { AppContext } from "../context/AppContext";
 
 const Currency = () => {
-    const {currency} = useContext(AppContext)
-    const {newCurrency, setNewCurrency} = useState(currency)
-    
-    AppReducer('CHG_CURRENCY', newCurrency)
+    const { dispatch, currency } = useContext(AppContext)
 
+    const updateCurrency = (currencyValue) => {
+        dispatch(
+            {
+                type: 'CHG_CURRENCY',
+                payload: currencyValue,
+
+            }
+        )
+
+    }
+    console.log(currency)
     return(
         <div>
             <div className="dropdown btn btn-secondary dropdown-toggle">
                 <label>Currency: </label>
-                <select name="currency" value={newCurrency} onChange={(e)=> console.log(e.target.value)}>
+                <select name="currency" defaultValue={currency} onChange={(e)=> {
+                        updateCurrency(e.target.value)
+                    }}>
                     <option value='$'>$ Dollar</option>
                     <option value='£'>£ Pound</option>
                     <option value='€'>€ Euro</option>
