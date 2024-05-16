@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Currency = () => {
@@ -17,8 +17,8 @@ const Currency = () => {
     console.log(currency)
     return(
         <div>
-            <div className="dropdown btn btn-secondary dropdown-toggle">
-                <label>Currency: </label>
+            <div className="dropdown btn btn-secondary ">
+                <label style={{marginRight: '0.5em'}}>Currency: </label>
                 <select name="currency" defaultValue={currency} onChange={(e)=> {
                         updateCurrency(e.target.value)
                     }}>
